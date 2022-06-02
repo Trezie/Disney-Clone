@@ -1,58 +1,95 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+
+import Header from "./components/Header";
+import Home from "./components/Home"
+import Detail from "./components/Detail"
+import Login from "./components/Login"
+import Detailsm from './components/Detailsm';
+import Detailshe from './components/Detailshe';
+import Detailsmo from './components/Detailsmo';
+import Detailsmickey from './components/Detailsmickey';
+import Detailsnow from './components/Detailsnow';
+import Detailsenc from './components/Detailsenc';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Detailsfrozen from './components/Detailsfrozen';
+import Detailspoca from './components/Detailspoca';
+
+
+import { Navigate, Outlet } from 'react-router-dom';
+import Detailstangled from './components/Detailstangled';
+import Detailslittle from './components/Detailslittle';
+import Detailcin from './components/Detailcin';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Router>
+        <Header /> 
+        <Switch>
+         
+          <Route path='/login'>
+            <Login />
+          </Route>
+          <Route path='/detail'>
+            <Detail />
+          </Route>
+          <Route path='/detailsenchanto'>
+            <Detailsenc />
+          </Route>
+
+          <Route path='/detailsmulan'>
+            <Detailsm />
+          </Route>
+          <Route path='/detailshercules'>
+            <Detailshe />
+          </Route>
+          <Route path='/detailsmickey'>
+            <Detailsmickey />
+          </Route>          
+          <Route path='/detailsmoana'>
+            <Detailsmo />
+          </Route>
+          <Route path='/detailsfrozen'>
+            <Detailsfrozen />
+          </Route>
+          <Route path='/detailspocahontas'>
+            <Detailspoca />
+          </Route>
+          <Route path='/detailsnowhite'>
+            <Detailsnow />
+          </Route>
+          <Route path='/detailstangled'>
+            <Detailstangled />
+          </Route>
+          <Route path='/detailslittlemermaid'>
+            <Detailslittle />
+          </Route>
+          <Route path='/detailscinderella'>
+            <Detailcin />
+          </Route>
+          <Route path="/" component={Home} />
+          
+          
+        </Switch>
+
+      </Router>
+         
+
     </div>
-  );
+    
+
+    
+
+  )
 }
 
 export default App;
+
+
+
